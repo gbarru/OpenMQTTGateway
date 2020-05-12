@@ -104,7 +104,7 @@
 #endif
 char mqtt_user[parameters_size] = "your_username"; // not compulsory only if your broker needs authentication
 char mqtt_pass[parameters_size] = "your_password"; // not compulsory only if your broker needs authentication
-char mqtt_server[parameters_size] = "192.168.1.17";
+char mqtt_server[parameters_size] = "192.168.2.2";
 char mqtt_port[6] = "1883";
 char mqtt_topic[mqtt_topic_max_size] = Base_Topic;
 char gateway_name[parameters_size * 2] = Gateway_Name;
@@ -152,12 +152,12 @@ int low_power_mode = DEFAULT_LOW_POWER_MODE;
 /*-------------DEFINE THE MODULES YOU WANT BELOW----------------*/
 //Addons and module management, uncomment the Z line corresponding to the module you want to use
 
-//#define ZgatewayRF     "RF"       //ESP8266, Arduino, ESP32
-//#define ZgatewayIR     "IR"       //ESP8266, Arduino,         Sonoff RF Bridge
+#define ZgatewayRF     "RF"       //ESP8266, Arduino, ESP32
+#define ZgatewayIR     "IR"       //ESP8266, Arduino,         Sonoff RF Bridge
 //#define ZgatewayLORA   "LORA"       //ESP8266, Arduino, ESP32
 //#define ZgatewayPilight "Pilight" //ESP8266, Arduino, ESP32
 //#define ZgatewayWeatherStation "WeatherStation" //ESP8266, Arduino, ESP32
-//#define ZgatewayBT     "BT"       //ESP8266, ESP32
+#define ZgatewayBT     "BT"       //ESP8266, ESP32
 //#define ZgatewayRF2    "RF2"      //ESP8266, Arduino, ESP32
 //#define ZgatewaySRFB   "SRFB"     //                          Sonoff RF Bridge
 //#define Zgateway2G     "2G"       //ESP8266, Arduino, ESP32
