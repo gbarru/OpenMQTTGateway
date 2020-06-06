@@ -202,14 +202,6 @@ void extract_char(char *token_char, char *subset, int start, int l, bool reverse
   subset[l] = '\0';
 }
 
-int strpos(char *haystack, char *needle) //from @miere https://stackoverflow.com/users/548685/miere
-{
-  char *p = strstr(haystack, needle);
-  if (p)
-    return p - haystack;
-  return -1;
-}
-
 char *ip2CharArray(IPAddress ip)
 { //from Nick Lee https://stackoverflow.com/questions/28119653/arduino-display-ethernet-localip
   static char a[16];
@@ -1278,7 +1270,7 @@ void stateMeasures()
   unsigned long uptime = millis() / 1000;
   SYSdata["uptime"] = uptime;
   SYSdata["version"] = OMG_VERSION;
-  Log.trace(F("retriving value of system characteristics Uptime (s):%u" CR),uptime);
+  Log.trace(F("retrieving value of system characteristics Uptime (s):%u" CR), uptime);
   #if defined(ESP8266) || defined(ESP32)
     uint32_t freeMem;
     freeMem = ESP.getFreeHeap();
